@@ -391,7 +391,7 @@
                     <!-- JOB 2 -->
                     <div class="relative border-l-2 border-[#004d1a] pl-6 py-1">
                         <div class="absolute -left-[9px] top-0 w-4 h-4 bg-[#004d1a] border border-[#00ff41] rounded-full"></div>
-                        <div class="text-xs md:text-sm opacity-60 mb-1">10/2024 - 03/2025</div>
+                        <div class="text-xs md:text-sm opacity-60 mb-1">10/2024 - 05/2025</div>
                         <h3 class="text-lg md:text-xl font-bold">Working Student - Information Security</h3>
                         <div class="text-[#008F11] font-bold mb-2">PUMA Group (Germany)</div>
                         <ul class="list-disc pl-5 text-xs md:text-sm space-y-1 opacity-90">
@@ -542,6 +542,10 @@
         const pathLabel = document.getElementById('current-path');
 
         function showSection(sectionId) {
+            // *** FIX: SCROLL TO TOP ***
+            // Reset scroll position of the container when switching sections
+            display.scrollTop = 0;
+
             // Update Nav Buttons
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(`btn-${sectionId}`).classList.add('active');
